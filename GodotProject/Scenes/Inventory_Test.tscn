@@ -1,0 +1,234 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Fonts/LabelDynamicFont.tres" type="FontFile" id=1]
+[ext_resource path="res://GUI/glass button 1.png" type="Texture2D" id=2]
+[ext_resource path="res://Textures/map.png" type="Texture2D" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.442383, 0.320622, 0.241928, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.442383, 0.320622, 0.241928, 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.403922, 0.345098, 0.317647, 1 )
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchor_top = 0.085
+anchor_right = 1.0
+anchor_bottom = 0.75
+offset_bottom = -6.10352e-05
+custom_minimum_size = Vector2( 0, 600 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 4
+
+[node name="GlassButton1" type="TextureButton" parent="GridContainer"]
+offset_right = 155.0
+offset_bottom = 197.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="GlassButton2" type="TextureButton" parent="GridContainer"]
+offset_left = 159.0
+offset_right = 314.0
+offset_bottom = 197.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="GlassButton3" type="TextureButton" parent="GridContainer"]
+offset_left = 318.0
+offset_right = 472.0
+offset_bottom = 197.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="GlassButton4" type="TextureButton" parent="GridContainer"]
+offset_left = 476.0
+offset_right = 630.0
+offset_bottom = 197.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="GlassButton5" type="TextureButton" parent="GridContainer"]
+offset_top = 201.0
+offset_right = 155.0
+offset_bottom = 398.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="GlassButton6" type="TextureButton" parent="GridContainer"]
+offset_left = 159.0
+offset_top = 201.0
+offset_right = 314.0
+offset_bottom = 398.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="GlassButton7" type="TextureButton" parent="GridContainer"]
+offset_left = 318.0
+offset_top = 201.0
+offset_right = 472.0
+offset_bottom = 398.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="GlassButton8" type="TextureButton" parent="GridContainer"]
+offset_left = 476.0
+offset_top = 201.0
+offset_right = 630.0
+offset_bottom = 398.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="GlassButton9" type="TextureButton" parent="GridContainer"]
+offset_top = 402.0
+offset_right = 155.0
+offset_bottom = 598.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="GlassButton10" type="TextureButton" parent="GridContainer"]
+offset_left = 159.0
+offset_top = 402.0
+offset_right = 314.0
+offset_bottom = 598.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="GlassButton11" type="TextureButton" parent="GridContainer"]
+offset_left = 318.0
+offset_top = 402.0
+offset_right = 472.0
+offset_bottom = 598.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="GlassButton12" type="TextureButton" parent="GridContainer"]
+offset_left = 476.0
+offset_top = 402.0
+offset_right = 630.0
+offset_bottom = 598.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="GlassButton13" type="TextureButton" parent="GridContainer"]
+offset_top = 602.0
+offset_right = 155.0
+offset_bottom = 798.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="GlassButton14" type="TextureButton" parent="GridContainer"]
+offset_left = 159.0
+offset_top = 602.0
+offset_right = 314.0
+offset_bottom = 798.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="GlassButton15" type="TextureButton" parent="GridContainer"]
+offset_left = 318.0
+offset_top = 602.0
+offset_right = 472.0
+offset_bottom = 798.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="GlassButton16" type="TextureButton" parent="GridContainer"]
+offset_left = 476.0
+offset_top = 602.0
+offset_right = 630.0
+offset_bottom = 798.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="MapImageTextureRect" type="TextureRect" parent="."]
+visible = false
+modulate = Color( 1.56863, 1.03137, 1.10196, 1 )
+anchor_top = 0.08
+anchor_right = 1.0
+anchor_bottom = 0.765
+offset_bottom = -6.10352e-05
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 7
+
+[node name="TitlePanelContainer" type="PanelContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.085
+custom_minimum_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource( 1 )
+
+[node name="Label" type="Label" parent="TitlePanelContainer"]
+offset_left = 223.0
+offset_top = 25.0
+offset_right = 407.0
+offset_bottom = 77.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource( 1 )
+text = "Far Far Range"
+align = 1
+
+[node name="LocationPanelContainer" type="PanelContainer" parent="."]
+anchor_top = 0.085
+anchor_bottom = 0.085
+offset_right = 630.0
+offset_bottom = 976.0
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource( 3 )
+
+[node name="InventoryPanelContainer" type="PanelContainer" parent="."]
+anchor_top = 0.75
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -6.10352e-05
+custom_minimum_size = Vector2( 0, 220 )
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource( 2 )
+
+[node name="MainVBoxContainer" type="VBoxContainer" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0

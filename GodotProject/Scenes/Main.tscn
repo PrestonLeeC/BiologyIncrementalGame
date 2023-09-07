@@ -1,521 +1,427 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=18 format=3 uid="uid://wh3g57t16s0n"]
 
-[ext_resource path="res://Fonts/LabelDynamicFont.tres" type="DynamicFont" id=1]
-[ext_resource path="res://Fonts/LabelNumberSmallerDynamicFont.tres" type="DynamicFont" id=2]
-[ext_resource path="res://GUI/JellyfishBG.jpg" type="Texture" id=3]
-[ext_resource path="res://Fonts/TitleDynamicFont.tres" type="DynamicFont" id=4]
-[ext_resource path="res://Fonts/LabelNumberDynamicFont.tres" type="DynamicFont" id=5]
-[ext_resource path="res://GUI/left-arrow.png" type="Texture" id=6]
-[ext_resource path="res://Icons/neuron.png" type="Texture" id=7]
-[ext_resource path="res://GUI/right-arrow.png" type="Texture" id=8]
-[ext_resource path="res://GUI/up-arrow.png" type="Texture" id=9]
-[ext_resource path="res://Themes/ContentTheme.tres" type="Theme" id=10]
+[ext_resource type="FontFile" path="res://Fonts/LabelDynamicFont.tres" id="1"]
+[ext_resource type="FontFile" path="res://Fonts/LabelNumberSmallerDynamicFont.tres" id="2"]
+[ext_resource type="Texture2D" uid="uid://b1k0lj3tc171f" path="res://GUI/JellyfishBG.jpg" id="3"]
+[ext_resource type="FontFile" path="res://Fonts/TitleDynamicFont.tres" id="4"]
+[ext_resource type="FontFile" path="res://Fonts/LabelNumberDynamicFont.tres" id="5"]
+[ext_resource type="Texture2D" uid="uid://cm83kfiv0wo8m" path="res://GUI/left-arrow.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://bh3igrulg0u7f" path="res://Icons/neuron.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://dtxterdw0qppi" path="res://GUI/right-arrow.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://51d4hxtbumuo" path="res://GUI/up-arrow.png" id="9"]
+[ext_resource type="Theme" path="res://Themes/ContentTheme.tres" id="10"]
 
-[sub_resource type="StyleBoxEmpty" id=1]
+[sub_resource type="StyleBoxEmpty" id="1"]
 
-[sub_resource type="StyleBoxEmpty" id=2]
+[sub_resource type="StyleBoxEmpty" id="4"]
 
-[sub_resource type="StyleBoxEmpty" id=3]
+[sub_resource type="StyleBoxEmpty" id="2"]
 
-[sub_resource type="StyleBoxEmpty" id=4]
+[sub_resource type="StyleBoxEmpty" id="3"]
 
-[sub_resource type="StyleBoxEmpty" id=7]
+[sub_resource type="StyleBoxEmpty" id="7"]
 content_margin_left = 9.0
 
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.54902, 0.337255, 0.564706, 0.509804 )
+[sub_resource type="StyleBoxFlat" id="5"]
+bg_color = Color(0.54902, 0.337255, 0.564706, 0.509804)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxEmpty" id=6]
+[sub_resource type="StyleBoxEmpty" id="6"]
 
 [node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="BackgroundColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.172549, 0.129412, 0.227451, 1 )
+color = Color(0.172549, 0.129412, 0.227451, 1)
 
 [node name="BackgroundTextureRect" type="TextureRect" parent="."]
-modulate = Color( 1, 1, 1, 0.129412 )
+modulate = Color(1, 1, 1, 0.129412)
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 3 )
-expand = true
-stretch_mode = 7
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3")
+expand_mode = 5
+stretch_mode = 6
 
 [node name="ScreenVBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 46.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="LevelSelectorPanelContainer" type="PanelContainer" parent="ScreenVBoxContainer"]
-margin_right = 630.0
-margin_bottom = 95.0
-rect_min_size = Vector2( 0, 90 )
-custom_styles/panel = SubResource( 1 )
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScreenVBoxContainer/LevelSelectorPanelContainer"]
-margin_right = 630.0
-margin_bottom = 95.0
-rect_min_size = Vector2( 0, 95 )
+custom_minimum_size = Vector2(0, 95)
+layout_mode = 2
 
 [node name="LeftButton" type="Button" parent="ScreenVBoxContainer/LevelSelectorPanelContainer/HBoxContainer"]
-margin_right = 120.0
-margin_bottom = 95.0
-rect_min_size = Vector2( 120, 0 )
-focus_mode = 0
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
 size_flags_vertical = 3
-custom_styles/hover = SubResource( 2 )
-custom_styles/pressed = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
-enabled_focus_mode = 0
-icon_align = 1
+focus_mode = 0
+theme_override_styles/normal = SubResource("4")
+theme_override_styles/hover = SubResource("2")
+theme_override_styles/pressed = SubResource("3")
+icon_alignment = 1
 expand_icon = true
 
 [node name="MarginContainer" type="MarginContainer" parent="ScreenVBoxContainer/LevelSelectorPanelContainer/HBoxContainer/LeftButton"]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_constants/margin_top = 20
-custom_constants/margin_bottom = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
 
 [node name="TextureRect" type="TextureRect" parent="ScreenVBoxContainer/LevelSelectorPanelContainer/HBoxContainer/LeftButton/MarginContainer"]
-margin_top = 20.0
-margin_right = 120.0
-margin_bottom = 75.0
-texture = ExtResource( 6 )
-expand = true
+layout_mode = 2
+texture = ExtResource("6")
+expand_mode = 1
 stretch_mode = 6
 
 [node name="TitleLabel" type="Label" parent="ScreenVBoxContainer/LevelSelectorPanelContainer/HBoxContainer"]
-margin_left = 124.0
-margin_right = 506.0
-margin_bottom = 95.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_colors/font_color_shadow = Color( 0.0862745, 0.529412, 0.47451, 1 )
-custom_constants/shadow_offset_x = 0
-custom_constants/line_spacing = -10
-custom_constants/shadow_offset_y = 4
-custom_fonts/font = ExtResource( 4 )
+theme_override_colors/font_shadow_color = Color(0.0862745, 0.529412, 0.47451, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/line_spacing = -10
+theme_override_fonts/font = ExtResource("4")
 text = "The Cell"
-align = 1
-valign = 1
 
 [node name="RightButton" type="Button" parent="ScreenVBoxContainer/LevelSelectorPanelContainer/HBoxContainer"]
-margin_left = 510.0
-margin_right = 630.0
-margin_bottom = 95.0
-rect_min_size = Vector2( 120, 0 )
-focus_mode = 0
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
 size_flags_vertical = 3
-custom_styles/hover = SubResource( 2 )
-custom_styles/pressed = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
-enabled_focus_mode = 0
-icon_align = 1
+focus_mode = 0
+theme_override_styles/normal = SubResource("4")
+theme_override_styles/hover = SubResource("2")
+theme_override_styles/pressed = SubResource("3")
+icon_alignment = 1
 expand_icon = true
 
 [node name="MarginContainer" type="MarginContainer" parent="ScreenVBoxContainer/LevelSelectorPanelContainer/HBoxContainer/RightButton"]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_constants/margin_top = 20
-custom_constants/margin_bottom = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
 
 [node name="TextureRect" type="TextureRect" parent="ScreenVBoxContainer/LevelSelectorPanelContainer/HBoxContainer/RightButton/MarginContainer"]
-margin_top = 20.0
-margin_right = 120.0
-margin_bottom = 75.0
-texture = ExtResource( 8 )
-expand = true
+layout_mode = 2
+texture = ExtResource("8")
+expand_mode = 1
 stretch_mode = 6
 
 [node name="ContentScrollContainer" type="ScrollContainer" parent="ScreenVBoxContainer"]
-margin_top = 99.0
-margin_right = 630.0
-margin_bottom = 1200.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource( 10 )
+theme = ExtResource("10")
 
 [node name="Lv3_VBoxContainer" type="VBoxContainer" parent="ScreenVBoxContainer/ContentScrollContainer"]
-margin_right = 630.0
-margin_bottom = 1101.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_constants/separation = 0
+theme_override_constants/separation = 0
 
 [node name="AnimalCellsLabel" type="Label" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer"]
-margin_right = 630.0
-margin_bottom = 45.0
-custom_colors/font_color = Color( 0.568627, 0.584314, 0.611765, 1 )
-custom_fonts/font = ExtResource( 1 )
-custom_styles/normal = SubResource( 7 )
+layout_mode = 2
+theme_override_colors/font_color = Color(0.568627, 0.584314, 0.611765, 1)
+theme_override_fonts/font = ExtResource("1")
+theme_override_styles/normal = SubResource("7")
 text = "Animal Cells"
 uppercase = true
 
 [node name="Neuron_HBoxContainer" type="HBoxContainer" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer"]
-margin_top = 45.0
-margin_right = 630.0
-margin_bottom = 105.0
-rect_min_size = Vector2( 0, 60 )
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="TextureRect" type="TextureRect" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer"]
-margin_top = 5.0
-margin_right = 70.0
-margin_bottom = 55.0
-rect_min_size = Vector2( 70, 50 )
+custom_minimum_size = Vector2(70, 50)
+layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
-texture = ExtResource( 7 )
-expand = true
+texture = ExtResource("7")
+expand_mode = 1
 stretch_mode = 6
 
 [node name="Name" type="Label" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer"]
-margin_left = 74.0
-margin_right = 219.0
-margin_bottom = 60.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1")
 text = "Neuron"
-valign = 1
 
 [node name="Growth" type="Label" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer"]
-margin_left = 223.0
-margin_right = 363.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 140, 0 )
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
 size_flags_vertical = 3
-custom_colors/font_color = Color( 0.227451, 1, 0.694118, 1 )
-custom_fonts/font = ExtResource( 5 )
+theme_override_colors/font_color = Color(0.227451, 1, 0.694118, 1)
+theme_override_fonts/font = ExtResource("5")
 text = "+37.1"
-align = 2
-valign = 1
 
 [node name="per_second" type="Label" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer"]
-margin_left = 367.0
-margin_right = 399.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 32, 0 )
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
 size_flags_vertical = 3
-custom_colors/font_color = Color( 0.698039, 0.698039, 0.698039, 1 )
-custom_fonts/font = ExtResource( 2 )
+theme_override_colors/font_color = Color(0.698039, 0.698039, 0.698039, 1)
+theme_override_fonts/font = ExtResource("2")
 text = "/s"
-valign = 1
 
 [node name="Quantity" type="Label" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer"]
-margin_left = 403.0
-margin_right = 480.0
-margin_bottom = 60.0
+layout_mode = 2
 size_flags_vertical = 3
-custom_colors/font_color = Color( 0.227451, 1, 0.694118, 1 )
-custom_fonts/font = ExtResource( 5 )
+theme_override_colors/font_color = Color(0.227451, 1, 0.694118, 1)
+theme_override_fonts/font = ExtResource("5")
 text = "102.4K"
-valign = 1
 
 [node name="out of Quanity" type="Label" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer"]
-margin_left = 484.0
-margin_right = 557.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 32, 0 )
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
 size_flags_vertical = 3
-custom_colors/font_color = Color( 0.698039, 0.698039, 0.698039, 1 )
-custom_fonts/font = ExtResource( 2 )
+theme_override_colors/font_color = Color(0.698039, 0.698039, 0.698039, 1)
+theme_override_fonts/font = ExtResource("2")
 text = "/102.4K"
-valign = 1
 
 [node name="UpgradeStorageButtonMarginContainer" type="MarginContainer" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer"]
-margin_left = 561.0
-margin_right = 630.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 69, 0 )
+custom_minimum_size = Vector2(69, 0)
+layout_mode = 2
 size_flags_vertical = 3
-custom_constants/margin_right = 15
-custom_constants/margin_left = 15
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 15
 
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer/UpgradeStorageButtonMarginContainer"]
-margin_left = 15.0
-margin_right = 54.0
-margin_bottom = 60.0
+layout_mode = 2
 
 [node name="Panel" type="Panel" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer/UpgradeStorageButtonMarginContainer/AspectRatioContainer"]
-margin_top = 10.5
-margin_right = 39.0
-margin_bottom = 49.5
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_styles/panel = SubResource( 5 )
+theme_override_styles/panel = SubResource("5")
 
 [node name="MarginContainer" type="MarginContainer" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer/UpgradeStorageButtonMarginContainer/AspectRatioContainer/Panel"]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_constants/margin_right = 8
-custom_constants/margin_top = 8
-custom_constants/margin_left = 8
-custom_constants/margin_bottom = 8
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
 
 [node name="TextureRect" type="TextureRect" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer/UpgradeStorageButtonMarginContainer/AspectRatioContainer/Panel/MarginContainer"]
-modulate = Color( 1, 1, 1, 0.905882 )
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 31.0
-margin_bottom = 31.0
-texture = ExtResource( 9 )
-expand = true
+modulate = Color(1, 1, 1, 0.905882)
+layout_mode = 2
+texture = ExtResource("9")
+expand_mode = 1
 stretch_mode = 6
 
 [node name="Neuron_HBoxContainer3" type="HBoxContainer" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer"]
-margin_top = 105.0
-margin_right = 630.0
-margin_bottom = 165.0
-rect_min_size = Vector2( 0, 60 )
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="TextureRect" type="TextureRect" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer3"]
-margin_top = 5.0
-margin_right = 70.0
-margin_bottom = 55.0
-rect_min_size = Vector2( 70, 50 )
+custom_minimum_size = Vector2(70, 50)
+layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
-texture = ExtResource( 7 )
-expand = true
+texture = ExtResource("7")
+expand_mode = 1
 stretch_mode = 6
 
 [node name="Name" type="Label" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer3"]
-margin_left = 74.0
-margin_right = 219.0
-margin_bottom = 60.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1")
 text = "Neuron"
-valign = 1
 
 [node name="Growth" type="Label" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer3"]
-margin_left = 223.0
-margin_right = 363.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 140, 0 )
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
 size_flags_vertical = 3
-custom_colors/font_color = Color( 0.227451, 1, 0.694118, 1 )
-custom_fonts/font = ExtResource( 5 )
+theme_override_colors/font_color = Color(0.227451, 1, 0.694118, 1)
+theme_override_fonts/font = ExtResource("5")
 text = "+37.1"
-align = 2
-valign = 1
 
 [node name="per_second" type="Label" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer3"]
-margin_left = 367.0
-margin_right = 399.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 32, 0 )
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
 size_flags_vertical = 3
-custom_colors/font_color = Color( 0.698039, 0.698039, 0.698039, 1 )
-custom_fonts/font = ExtResource( 2 )
+theme_override_colors/font_color = Color(0.698039, 0.698039, 0.698039, 1)
+theme_override_fonts/font = ExtResource("2")
 text = "/s"
-valign = 1
 
 [node name="Quantity" type="Label" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer3"]
-margin_left = 403.0
-margin_right = 480.0
-margin_bottom = 60.0
+layout_mode = 2
 size_flags_vertical = 3
-custom_colors/font_color = Color( 0.227451, 1, 0.694118, 1 )
-custom_fonts/font = ExtResource( 5 )
+theme_override_colors/font_color = Color(0.227451, 1, 0.694118, 1)
+theme_override_fonts/font = ExtResource("5")
 text = "102.4K"
-valign = 1
 
 [node name="out of Quanity" type="Label" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer3"]
-margin_left = 484.0
-margin_right = 557.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 32, 0 )
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
 size_flags_vertical = 3
-custom_colors/font_color = Color( 0.698039, 0.698039, 0.698039, 1 )
-custom_fonts/font = ExtResource( 2 )
+theme_override_colors/font_color = Color(0.698039, 0.698039, 0.698039, 1)
+theme_override_fonts/font = ExtResource("2")
 text = "/102.4K"
-valign = 1
 
 [node name="UpgradeStorageButtonMarginContainer" type="MarginContainer" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer3"]
-margin_left = 561.0
-margin_right = 630.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 69, 0 )
+custom_minimum_size = Vector2(69, 0)
+layout_mode = 2
 size_flags_vertical = 3
-custom_constants/margin_right = 15
-custom_constants/margin_left = 15
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 15
 
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer3/UpgradeStorageButtonMarginContainer"]
-margin_left = 15.0
-margin_right = 54.0
-margin_bottom = 60.0
+layout_mode = 2
 
 [node name="Panel" type="Panel" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer3/UpgradeStorageButtonMarginContainer/AspectRatioContainer"]
-margin_top = 10.5
-margin_right = 39.0
-margin_bottom = 49.5
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_styles/panel = SubResource( 5 )
+theme_override_styles/panel = SubResource("5")
 
 [node name="MarginContainer" type="MarginContainer" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer3/UpgradeStorageButtonMarginContainer/AspectRatioContainer/Panel"]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_constants/margin_right = 8
-custom_constants/margin_top = 8
-custom_constants/margin_left = 8
-custom_constants/margin_bottom = 8
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
 
 [node name="TextureRect" type="TextureRect" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer3/UpgradeStorageButtonMarginContainer/AspectRatioContainer/Panel/MarginContainer"]
-modulate = Color( 1, 1, 1, 0.905882 )
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 31.0
-margin_bottom = 31.0
-texture = ExtResource( 9 )
-expand = true
+modulate = Color(1, 1, 1, 0.905882)
+layout_mode = 2
+texture = ExtResource("9")
+expand_mode = 1
 stretch_mode = 6
 
 [node name="SpacingPanel" type="Panel" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer"]
-margin_top = 165.0
-margin_right = 630.0
-margin_bottom = 193.0
-rect_min_size = Vector2( 0, 28 )
-custom_styles/panel = SubResource( 6 )
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+theme_override_styles/panel = SubResource("6")
 
 [node name="AnimalCellsMarginContainer2" type="MarginContainer" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer"]
-margin_top = 193.0
-margin_right = 630.0
-margin_bottom = 238.0
-custom_constants/margin_left = 12
+layout_mode = 2
+theme_override_constants/margin_left = 12
 
 [node name="Label" type="Label" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/AnimalCellsMarginContainer2"]
-margin_left = 12.0
-margin_right = 630.0
-margin_bottom = 45.0
-custom_colors/font_color = Color( 0.568627, 0.584314, 0.611765, 1 )
-custom_fonts/font = ExtResource( 1 )
+layout_mode = 2
+theme_override_colors/font_color = Color(0.568627, 0.584314, 0.611765, 1)
+theme_override_fonts/font = ExtResource("1")
 text = "Plant Cells"
 uppercase = true
 
 [node name="Neuron_HBoxContainer2" type="HBoxContainer" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer"]
-margin_top = 238.0
-margin_right = 630.0
-margin_bottom = 298.0
-rect_min_size = Vector2( 0, 60 )
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="IconMarginContainer" type="MarginContainer" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer2"]
-margin_right = 69.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 69, 0 )
+custom_minimum_size = Vector2(69, 0)
+layout_mode = 2
 size_flags_vertical = 3
-custom_constants/margin_right = 10
-custom_constants/margin_left = 10
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
 
 [node name="TextureRect" type="TextureRect" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer2/IconMarginContainer"]
-margin_left = 10.0
-margin_right = 59.0
-margin_bottom = 60.0
-texture = ExtResource( 7 )
-expand = true
+layout_mode = 2
+texture = ExtResource("7")
+expand_mode = 1
 stretch_mode = 6
 
 [node name="Name" type="Label" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer2"]
-margin_left = 73.0
-margin_right = 219.0
-margin_bottom = 60.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = ExtResource( 1 )
+theme_override_fonts/font = ExtResource("1")
 text = "Neuron"
-valign = 1
 
 [node name="Growth" type="Label" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer2"]
-margin_left = 223.0
-margin_right = 363.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 140, 0 )
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
 size_flags_vertical = 3
-custom_colors/font_color = Color( 0.227451, 1, 0.694118, 1 )
-custom_fonts/font = ExtResource( 5 )
+theme_override_colors/font_color = Color(0.227451, 1, 0.694118, 1)
+theme_override_fonts/font = ExtResource("5")
 text = "+37.1"
-align = 2
-valign = 1
 
 [node name="per second" type="Label" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer2"]
-margin_left = 367.0
-margin_right = 399.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 32, 0 )
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
 size_flags_vertical = 3
-custom_colors/font_color = Color( 0.698039, 0.698039, 0.698039, 1 )
-custom_fonts/font = ExtResource( 2 )
+theme_override_colors/font_color = Color(0.698039, 0.698039, 0.698039, 1)
+theme_override_fonts/font = ExtResource("2")
 text = "/s"
-valign = 1
 
 [node name="Quantity" type="Label" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer2"]
-margin_left = 403.0
-margin_right = 480.0
-margin_bottom = 60.0
+layout_mode = 2
 size_flags_vertical = 3
-custom_colors/font_color = Color( 0.227451, 1, 0.694118, 1 )
-custom_fonts/font = ExtResource( 5 )
+theme_override_colors/font_color = Color(0.227451, 1, 0.694118, 1)
+theme_override_fonts/font = ExtResource("5")
 text = "102.4K"
-valign = 1
 
 [node name="out of Quanity" type="Label" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer2"]
-margin_left = 484.0
-margin_right = 557.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 32, 0 )
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
 size_flags_vertical = 3
-custom_colors/font_color = Color( 0.698039, 0.698039, 0.698039, 1 )
-custom_fonts/font = ExtResource( 2 )
+theme_override_colors/font_color = Color(0.698039, 0.698039, 0.698039, 1)
+theme_override_fonts/font = ExtResource("2")
 text = "/102.4K"
-valign = 1
 
 [node name="UpgradeStorageIconMarginContainer" type="MarginContainer" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer2"]
-margin_left = 561.0
-margin_right = 630.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 69, 0 )
+custom_minimum_size = Vector2(69, 0)
+layout_mode = 2
 size_flags_vertical = 3
-custom_constants/margin_right = 15
-custom_constants/margin_left = 15
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 15
 
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer2/UpgradeStorageIconMarginContainer"]
-margin_left = 15.0
-margin_right = 54.0
-margin_bottom = 60.0
+layout_mode = 2
 
 [node name="Panel" type="Panel" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer2/UpgradeStorageIconMarginContainer/AspectRatioContainer"]
-margin_top = 10.5
-margin_right = 39.0
-margin_bottom = 49.5
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_styles/panel = SubResource( 5 )
+theme_override_styles/panel = SubResource("5")
 
 [node name="MarginContainer" type="MarginContainer" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer2/UpgradeStorageIconMarginContainer/AspectRatioContainer/Panel"]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_constants/margin_right = 8
-custom_constants/margin_top = 8
-custom_constants/margin_left = 8
-custom_constants/margin_bottom = 8
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
 
 [node name="TextureRect" type="TextureRect" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer/Neuron_HBoxContainer2/UpgradeStorageIconMarginContainer/AspectRatioContainer/Panel/MarginContainer"]
-modulate = Color( 1, 1, 1, 0.905882 )
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 31.0
-margin_bottom = 31.0
-texture = ExtResource( 9 )
-expand = true
+modulate = Color(1, 1, 1, 0.905882)
+layout_mode = 2
+texture = ExtResource("9")
+expand_mode = 1
 stretch_mode = 6
