@@ -1,9 +1,9 @@
-ea4bc82a6ad023ab7ee23ee620429895
-::res://::1694117836
-default_env.tres::Environment::-1::1694117818::0::1::::<><>::
-export_presets.cfg::TextFile::-1::1662066507::0::1::::<><>::
+fc8a56933c4b1c8d796fdb8f7a9f9475
+::res://::1694119206
+default_env.tres::Environment::6181373201684766990::1694119200::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1694118921::0::1::::<><>::
 icon.png::CompressedTexture2D::1099682471043899424::1662065915::1694117838::1::::<><>::
-::res://Fonts/::1664398824
+::res://Fonts/::1694117838
 FredokaOne-Regular.ttf::FontFile::8337576271834735291::1661979767::1694117838::1::::<><>::
 LabelDynamicFont.tres::FontFile::-1::1694117818::0::1::::<><>::res://Fonts/YanoneKaffeesatz-Regular.ttf
 LabelNumberDynamicFont.tres::FontFile::-1::1694117818::0::1::::<><>::res://Fonts/Oswald-Regular.ttf
@@ -11,20 +11,20 @@ LabelNumberSmallerDynamicFont.tres::FontFile::-1::1694117818::0::1::::<><>::res:
 Oswald-Regular.ttf::FontFile::8460151174121938920::1661980404::1694117838::1::::<><>::
 TitleDynamicFont.tres::FontFile::-1::1694117818::0::1::::<><>::res://Fonts/FredokaOne-Regular.ttf
 YanoneKaffeesatz-Regular.ttf::FontFile::6007375178169473302::1661979398::1694117838::1::::<><>::
-::res://GUI/::1664396524
+::res://GUI/::1694117839
 glass button 1.png::CompressedTexture2D::7559653012997558499::1664396522::1694117838::1::::<><>::
 JellyfishBG.jpg::CompressedTexture2D::4233512481206336713::1661977274::1694117839::1::::<><>::
 left-arrow.png::CompressedTexture2D::5684950166626693638::1661978138::1694117838::1::::<><>::
 right-arrow.png::CompressedTexture2D::8541492433148475858::1661978138::1694117838::1::::<><>::
 up-arrow.png::CompressedTexture2D::2159573473807429686::1661980030::1694117838::1::::<><>::
 upgrade.png::CompressedTexture2D::4465462922996235515::1661979943::1694117838::1::::<><>::
-::res://Icons/::1662058754
+::res://Icons/::1694117838
 neuron.png::CompressedTexture2D::2936042541280417821::1661979189::1694117838::1::::<><>::
-::res://Scenes/::1664399454
+::res://Scenes/::1694119200
 Inventory_Test.tscn::PackedScene::-1::1694117818::0::1::::<><>::res://Fonts/LabelDynamicFont.tres<>res://GUI/glass button 1.png<>res://Textures/map.png
-Main.tscn::PackedScene::-1::1694117818::0::1::::<><>::res://Fonts/LabelDynamicFont.tres<>res://Fonts/LabelNumberSmallerDynamicFont.tres<>res://GUI/JellyfishBG.jpg<>res://Fonts/TitleDynamicFont.tres<>res://Fonts/LabelNumberDynamicFont.tres<>res://GUI/left-arrow.png<>res://Icons/neuron.png<>res://GUI/right-arrow.png<>res://GUI/up-arrow.png<>res://Themes/ContentTheme.tres
+Main.tscn::PackedScene::1560317620909524767::1694119200::0::1::::<><>::res://Fonts/LabelDynamicFont.tres<>res://Fonts/LabelNumberSmallerDynamicFont.tres<>uid://b1k0lj3tc171f::::res://GUI/JellyfishBG.jpg<>res://Fonts/TitleDynamicFont.tres<>res://Fonts/LabelNumberDynamicFont.tres<>uid://cm83kfiv0wo8m::::res://GUI/left-arrow.png<>uid://bh3igrulg0u7f::::res://Icons/neuron.png<>uid://dtxterdw0qppi::::res://GUI/right-arrow.png<>uid://51d4hxtbumuo::::res://GUI/up-arrow.png<>res://Themes/ContentTheme.tres
 ::res://Scripts/::1662062052
-::res://Textures/::1664396524
+::res://Textures/::1694117840
 map.png::CompressedTexture2D::2952053471125873054::1664395987::1694117840::1::::<><>::
 ::res://Themes/::1662064610
 ContentTheme.tres::Theme::-1::1694117818::0::1::::<><>::

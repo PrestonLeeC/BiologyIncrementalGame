@@ -239,6 +239,7 @@ expand_mode = 1
 stretch_mode = 6
 
 [node name="Neuron_HBoxContainer3" type="HBoxContainer" parent="ScreenVBoxContainer/ContentScrollContainer/Lv3_VBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_horizontal = 3
